@@ -5,17 +5,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-24.04
-    container: archlinux:base-devel
-
     steps:
     - uses: actions/checkout@v4
-    - name: Checkout shared CI repo
-      uses: actions/checkout@v4
-      with:
-        repository: lxqt/ci
-        path: shared-ci
-    - name: Build
-      run: bash ./.ci/build.sh
     - uses: fawazahmed0/action-debug-vscode@main
