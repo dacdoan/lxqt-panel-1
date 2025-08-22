@@ -1414,8 +1414,8 @@ bool LXQtPanel::isPanelOverlapped() const
     ignoreList |= NET::TopMenuMask;
     ignoreList |= NET::NotificationMask;
 
-    const auto wIds = KX11Extras::stackingOrder();
-    for (auto const wId : wIds)
+    const auto wId = KX11Extras::activeWindow();
+    if (wId)
     {
         KWindowInfo info(wId, NET::WMWindowType | NET::WMState | NET::WMFrameExtents | NET::WMDesktop);
         if (info.valid()
@@ -1426,7 +1426,7 @@ bool LXQtPanel::isPanelOverlapped() const
             // check against the list of ignored types
             && !NET::typeMatchesMask(info.windowType(NET::AllTypesMask), ignoreList))
         {
-            if (info.frameGeometry().intersects(mGeometry))
+            if (info.frameGeometry().height() > mGeometry.y() * 2)
                 return true;
         }
     }

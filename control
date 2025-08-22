@@ -6,22 +6,22 @@ Uploaders: Alf Gaida <agaida@siduction.org>,
            Andrew Lee (李健秋) <ajqlee@debian.org>
 Section: x11
 Priority: optional
-Build-Depends: debhelper-compat (= 13),
+Build-Depends: debhelper-compat,
                libasound2-dev,
                libdbusmenu-qt5-dev,
                libglib2.0-dev,
                libicu-dev,
                libkf5solid-dev,
                libkf5windowsystem-dev,
-               liblxqt-globalkeys-ui1-dev (>= 1.4.0),
-               liblxqt-globalkeys1-dev (>= 1.4.0),
-               liblxqt1-dev (>= 1.4.0),
+               liblxqt-globalkeys-ui1-dev,
+               liblxqt-globalkeys1-dev,
+               liblxqt1-dev,
                libpulse-dev,
                libqt5svg5-dev,
                libqt5x11extras5-dev,
-               libsensors-dev [!hurd-any],
-               libstatgrab-dev [linux-any],
-               libsysstat-qt5-0-dev (>= 0.4.5),
+               libsensors-dev,
+               libstatgrab-dev,
+               libsysstat-qt5-0-dev,
                libx11-dev,
                libxcb-composite0-dev,
                libxcb-damage0-dev,
@@ -36,7 +36,7 @@ Build-Depends: debhelper-compat (= 13),
                libxkbcommon-x11-dev,
                libxrender-dev,
                libxtst-dev,
-               lxqt-menu-data (>= 1.4.0)
+               lxqt-menu-data
 Standards-Version: 4.6.2
 Vcs-Browser: https://git.lubuntu.me/Lubuntu/lxqt-panel-packaging
 Vcs-Git: https://git.lubuntu.me/Lubuntu/lxqt-panel-packaging.git
